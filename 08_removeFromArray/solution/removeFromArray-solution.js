@@ -4,9 +4,9 @@
 const removeFromArray = function (array, ...args) {
   // create a new empty array
   const newArray = [];
-  // use forEach to go through the array
+  // use forEach to go through the array  //for each,her elemana bir kez fonksiyonu uygular.
   array.forEach((item) => {
-    // push every element into the new array
+    // push every element into the new array //bu içerdeki fonka callback fonk deniliyor.
     // UNLESS it is included in the function arguments
     // so we create a new array with every item, except those that should be removed
     if (!args.includes(item)) {
@@ -16,6 +16,9 @@ const removeFromArray = function (array, ...args) {
   // and return that array
   return newArray;
 };
+
+//forEach yeni bir array returnlemez ama push vs kendin yaparsın. map ise kendisi otomatik yeni array döndürür.
+//...args yerine ...examples vesaire de diyebilirsin. önemli olan ... denilen rest parametre,args reserved değil.
 
 // A simpler, but more advanced way to do it is to use the 'filter' function,
 // which basically does what we did with the forEach above.

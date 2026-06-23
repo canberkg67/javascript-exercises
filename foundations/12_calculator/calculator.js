@@ -40,7 +40,7 @@ console.log(power(5,3));
 const factorial = function(number) {
   let total = 1;
   for (let i=number; i>0; i-- ){
-    total *= number;
+    total *= i;
   }
   return total;
 };
